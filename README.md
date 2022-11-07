@@ -1,27 +1,16 @@
-# Next.js + Tailwind CSS Example
+# Creable Developer Assessment
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This project is made for the Software Developer assessment and is based on the specifications given [here](https://creableio.notion.site/Coding-Challenge-Full-Stack-a3fffea292674299b24db85e496e6c4c) The project uses [Tailwind CSS](https://tailwindcss.com/) with Next.js.
 
-## Deploy your own
+## Changes from the specs
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+All the functionality from the specs has been implemented, except the UI for the grid on the results page is not 100% according to the provided Figma mockups due to time constraints.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Challenges faced
 
-## How to use
+Most of the application was normal but I did have some difficulty finding a reliable and **_free_** TikTok API that provided all the data we needed.
+If doing this project again, I would try and use the tailwind config more than I did this time to specify a unified UI template throughout the application. Other than this I am pretty ok with this project at an assessment level.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## Backend
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Most of the app logic is in the front-end, with the backend only querying and relaying the 3rd party API. I wanted to eliminate the backend as a whole because there are only 2 http paths in but there were some issues with CORS with the 3rd party api so I made a rudamentary backend in .Net Core and deployed it in Azure via CI/CD. The front-end is also configured with CI/CD with Netlify and Github actions.
