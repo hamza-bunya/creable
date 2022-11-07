@@ -13,4 +13,8 @@ If doing this project again, I would try and use the tailwind config more than I
 
 ## Backend
 
-Most of the app logic is in the front-end, with the backend only querying and relaying the 3rd party API. I wanted to eliminate the backend as a whole because there are only 2 http paths in but there were some issues with CORS with the 3rd party api so I made a rudamentary backend in .Net Core and deployed it in Azure via CI/CD. The front-end is also configured with CI/CD with Netlify and Github actions.
+Most of the app logic is in the front-end, with the backend only querying and relaying the 3rd party API. I wanted to eliminate the backend as a whole because there were only 2 http calls but there were some issues with CORS with the 3rd party api so I made a rudamentary backend in .Net Core and deployed it in Azure via CI/CD. The front-end is also configured with CI/CD with Netlify and Github actions.
+
+## Bonus features
+
+I wasn't able to get to writing tests for the application but the app is configured to use shareable links, i.e. if you copy the link from the results page and open it in any other browser, the information returned would be the same.
